@@ -1,29 +1,50 @@
 import React from 'react';
 import { certificates } from '../data/portfolioData';
 
+const ExternalLinkIcon = () => (
+  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+  </svg>
+);
+
 const CertificateCard = ({ cert, aosDelay }) => (
   <div 
     data-aos="zoom-in"
     data-aos-delay={aosDelay}
-    className="bg-black/20 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-white/25 hover:scale-105 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] transition-all duration-500 cursor-default group"
+    className="bg-black/20 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-white/25 hover:scale-105 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] transition-all duration-500 flex flex-col justify-between group"
   >
-    <div className="flex items-start gap-4">
+    <div className="flex items-start gap-4 mb-4">
       <span className="text-2xl mt-0.5 group-hover:scale-110 transition-transform duration-300">{cert.icon}</span>
       <div>
         <h3 className="text-white font-bold text-sm md:text-base leading-tight mb-1 group-hover:text-white transition-colors">
           {cert.name}
         </h3>
-        <p className="text-white/50 text-xs font-semibold uppercase tracking-wider">
+        <p className="text-white/60 text-xs font-semibold uppercase tracking-wider">
           {cert.issuer}
         </p>
       </div>
     </div>
+
+    {/* Direct Verification Link Button */}
+    {cert.verificationUrl && (
+      <div className="pt-2 border-t border-white/10 flex justify-end">
+        <a 
+          href={cert.verificationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white hover:text-black text-white text-xs font-bold transition-all duration-300 shadow-sm"
+        >
+          {cert.buttonText || "Verify Certificate"}
+          <ExternalLinkIcon />
+        </a>
+      </div>
+    )}
   </div>
 );
 
 const Certificates = () => {
   return (
-    <section className="bg-[#ff2a2a] pt-20 pb-28 px-6 md:px-12 w-full relative overflow-hidden font-sans">
+    <section id="certificates" className="bg-[#ff2a2a] pt-20 pb-28 px-6 md:px-12 w-full relative overflow-hidden font-sans">
       
       {/* Torn paper divider at top (transition from dark Projects section) */}
       <div className="absolute top-0 left-0 w-full pointer-events-none z-10 transform -translate-y-[1px] rotate-180">
@@ -36,15 +57,15 @@ const Certificates = () => {
         {/* Header */}
         <div data-aos="fade-up" className="mb-12 md:mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight">
-            Certifications
+            Certifications & Achievements
           </h2>
           <p className="text-red-100 text-base md:text-lg font-semibold max-w-lg mx-auto">
-            Industry-recognized certifications that validate my technical expertise.
+            Verified technical certifications and competition milestones.
           </p>
         </div>
 
         {/* Certificate Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8">
           {certificates.featured.map((cert, index) => (
             <CertificateCard 
               key={cert.name} 
@@ -53,27 +74,9 @@ const Certificates = () => {
             />
           ))}
         </div>
-
-        {/* View All Certificates CTA */}
-        <div data-aos="fade-up" data-aos-delay="700" className="flex justify-center">
-          <a
-            href={certificates.viewAllUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 px-8 py-3.5 rounded-full bg-white text-black font-bold text-base hover:bg-gray-100 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all duration-300 group"
-          >
-            <svg className="w-5 h-5 text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-            </svg>
-            View All Certificates
-            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </a>
-        </div>
       </div>
 
-      {/* Decorative stars (matching About section) */}
+      {/* Decorative stars */}
       <div className="absolute top-16 left-6 md:left-16 text-black opacity-20 animate-pulse">
         <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z"/></svg>
       </div>

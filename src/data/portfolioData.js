@@ -1,296 +1,252 @@
 // ============================================================
-// portfolioData.js — Centralized configuration for Md Yusuf's Portfolio
+// portfolioData.js — Centralized configuration for Bhoomika K's Portfolio
 // All external links, personal info, and content in one place.
 // Update this file to change any content across the entire site.
 // ============================================================
 
 export const personalInfo = {
-  name: "Md Yusuf",
-  firstName: "Md Yusuf",
-  brandName: "Md Yusuf",
-  title: "Full Stack & Java Developer",
-  location: "Bhopal, India",
-  phone: "+91 99396-08743",
+  name: "Bhoomika K",
+  firstName: "Bhoomika",
+  brandName: "Bhoomika K",
+  title: "Software Developer",
+  location: "Bengaluru, Karnataka, India",
+  phone: "+91 9113822349",
   emails: {
-    primary: "mdyusufcse096@iesuniversity.ac.in",
-    secondary: "yusuf.rgpv@gmail.com",
+    primary: "hbhoomi2004@gmail.com",
   },
   summary:
-    "Aspiring software engineer and motivated B.Tech Computer Science student with solid skills in Java, Spring Boot, React, and Python. Passionate about building scalable full-stack applications with clean architecture and modern tech stacks.",
-  resumeUrl: "/Md_Yusuf_Resume_2026.pdf",
+    "Computer Science Engineering student with an 8.14 CGPA and hands-on experience in software development, Python, SQL, databases, and application workflows. Skilled in object-oriented programming, problem solving, debugging, database management, and developing technology solutions. Experienced in collaborating with technical teams across the SDLC and building software and IoT-based projects. Seeking a Software Developer role to contribute to scalable, reliable, and maintainable software solutions.",
+  resumeUrl: "/BHOOMIKA_K_Resume.pdf",
 };
 
 export const socialLinks = {
-  github: "https://github.com/mdyusuf0",
-  linkedin: "https://linkedin.com/in/mdyusuf0",
-  instagram: "https://instagram.com/heyyusuffff",
+  github: "https://github.com/Bhoomika716",
+  linkedin: "https://www.linkedin.com/in/bhoomika-k-computer-science-engineering",
 };
 
 export const heroContent = {
-  greeting: "Hi, I'm Md Yusuf",
-  titleHighlight: "Full Stack & Java Developer",
+  greeting: "Hi, I'm Bhoomika K",
+  titleHighlight: "Software Developer",
   subtitle:
-    "I build fast, scalable applications using Java, Spring Boot, MERN Stack, and Python.",
+    "Building scalable software solutions, intelligent web platforms, and IoT automation systems.",
   ctaPrimary: { text: "View My Work", href: "#projects" },
   ctaSecondary: {
     text: "Contact Me",
-    href: "mailto:mdyusufcse096@iesuniversity.ac.in?subject=Hiring Inquiry – Portfolio&body=Hello Md Yusuf,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,",
+    href: "mailto:hbhoomi2004@gmail.com?subject=Hiring Inquiry – Portfolio&body=Hello Bhoomika,%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,",
   },
-  ctaResume: { text: "Download Resume", href: "/Md_Yusuf_Resume_2026.pdf" },
+  ctaResume: { text: "Download Resume", href: "/BHOOMIKA_K_Resume.pdf" },
 };
 
 export const aboutContent = {
   heading: "Hello!",
-  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Md Yusuf</span>, an aspiring software engineer based in Bhopal, India, dedicated to crafting clean, functional, and highly scalable full-stack applications.`,
-  techStack: ["Java", "Spring Boot", "MERN Stack"],
+  bio: `Hi, my name is <span class="text-black text-xl font-black mx-1 tracking-wide uppercase">Bhoomika K</span>, a Computer Science Engineering student based in Bengaluru, India. I specialize in building reliable full-stack applications, intelligent platforms, and database-driven solutions with Python, Java, SQL, and React.js.`,
+  techStack: ["Python", "Java", "React.js"],
 };
 
 export const skillsContent = {
   badge: "My Process",
-  heading: "Here's how I turn ideas into real-world applications",
+  heading: "Here's how I turn ideas into reliable software solutions",
   description:
-    "I follow a structured, creative, and highly technical approach to turn ideas into robust full-stack applications.",
+    "I follow a structured and technical approach across the Software Development Life Cycle (SDLC) to build scalable applications.",
   cards: [
     {
       number: "01",
-      title: "Research",
-      text: "I start by understanding goals, user requirements, and technical constraints to lay a rock-solid foundation for the project.",
+      title: "Requirements & SDLC",
+      text: "Analyzing application workflows, user needs, and system specifications to establish clear engineering objectives.",
     },
     {
       number: "02",
-      title: "Design",
-      text: "Crafting clean architecture, intuitive interfaces, and pixel-perfect wireframes that guarantee an engaging and accessible user experience.",
+      title: "Architecture & Database",
+      text: "Designing normalized relational schemas (MySQL, PostgreSQL) and robust backend APIs with Python, FastAPI, and Node.js.",
     },
     {
       number: "03",
-      title: "Develop",
-      text: "Building scalable backends and responsive frontends using modern tech stacks and best practices.",
+      title: "Development & Integration",
+      text: "Building responsive frontends in React.js, integrating AI models, IoT hardware (ESP32), and automation pipelines.",
     },
     {
       number: "04",
-      title: "Deploy",
-      text: "Rigorous testing, performance optimization, and seamless deployment to cloud infrastructure, followed by ongoing support.",
+      title: "Testing & Optimization",
+      text: "Rigorous unit testing, performance optimization, debugging database processes, and seamless deployment.",
     },
   ],
   endText: "Ready to ship!",
 };
 
-// Brand New Technical Skills Data
+// Technical Skills Data
 export const technicalSkills = {
   categories: [
     {
-      title: "Programming Languages",
+      title: "Programming Languages & Web",
       skills: [
-        { name: "Java", level: 90 },
-        { name: "C++", level: 85 },
-        { name: "Python", level: 75 }
+        { name: "Python", level: 92 },
+        { name: "Java", level: 85 },
+        { name: "SQL", level: 90 },
+        { name: "JavaScript", level: 88 },
+        { name: "React.js", level: 85 },
+        { name: "HTML5 / CSS3", level: 92 }
       ]
     },
     {
-      title: "Full Stack",
+      title: "Backend & APIs",
       skills: [
-        { name: "MERN Stack", level: 90 },
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
-        { name: "JavaScript", level: 92 }
+        { name: "REST APIs", level: 90 },
+        { name: "FastAPI", level: 85 },
+        { name: "Node.js", level: 80 }
       ]
     },
     {
-      title: "Backend",
+      title: "Databases & Cloud",
       skills: [
-        { name: "Spring Boot", level: 88 },
-        { name: "FastAPI", level: 75 },
-        { name: "REST APIs", level: 90 }
+        { name: "MySQL", level: 90 },
+        { name: "MongoDB", level: 85 },
+        { name: "NoSQL", level: 82 },
+        { name: "AWS", level: 75 }
       ]
     },
     {
-      title: "Databases",
+      title: "Tools & Version Control",
       skills: [
-        { name: "MongoDB", level: 88 },
-        { name: "MySQL", level: 85 },
-        { name: "Firebase", level: 80 }
-      ]
-    },
-    {
-      title: "Tools & Automation",
-      skills: [
-        { name: "Git & GitHub", level: 90 },
+        { name: "Git & GitHub", level: 92 },
         { name: "VS Code", level: 95 },
-        { name: "Postman", level: 88 },
-        { name: "n8n", level: 82 },
-        { name: "MongoDB Compass", level: 85 },
-        { name: "Antigravity", level: 80 },
-        { name: "Codex", level: 75 }
+        { name: "Oracle Cloud (OCI)", level: 85 }
       ]
     },
     {
-      title: "Computer Science Concepts",
+      title: "Core CS Concepts",
       skills: [
-        { name: "Data Structures", level: 88 },
-        { name: "Algorithms", level: 85 },
-        { name: "DBMS", level: 86 },
-        { name: "OOP", level: 90 },
-        { name: "Software Engineering", level: 84 }
+        { name: "Object-Oriented Programming (OOP)", level: 92 },
+        { name: "DBMS & Database Design", level: 90 },
+        { name: "Data Structures & Algorithms", level: 88 },
+        { name: "SDLC & Engineering Workflows", level: 90 }
+      ]
+    },
+    {
+      title: "Software Engineering Skills",
+      skills: [
+        { name: "Debugging & Troubleshooting", level: 92 },
+        { name: "Unit Testing", level: 85 },
+        { name: "Code Optimization", level: 88 },
+        { name: "Problem Solving (500+ DSA)", level: 95 }
       ]
     }
   ]
 };
 
-// Brand New Content Creation Data
 export const contentCreation = {
-  badge: "Cinematic Content",
-  heading: "Creative Direction & Cinematic Edits",
-  description: "Beyond coding, I craft visual stories with premium editing, color grading, and creative pacing.",
+  badge: "Featured Platforms",
+  heading: "Project Highlights & Engineering Demos",
+  description: "Demonstrations and interactive web platforms built with AI, React.js, and IoT automation.",
   categories: [
     {
-      title: "Cinematic Reels",
-      description: "Visual stories crafted with cinematic lighting, premium color grading, and high-impact sound design.",
-      stats: "50+ Reels Created",
-      icon: "🎥"
+      title: "CareerBridge AI",
+      description: "AI-powered career platform for ATS resume evaluation, skill-gap analysis, and interview roadmaps.",
+      stats: "AI + Analytics",
+      icon: "🚀"
     },
     {
-      title: "Travel Videos",
-      description: "Immersive travel vlogs and aesthetic edits capturing cultures, landscapes, and visual rhythms.",
-      stats: "15+ Countries/Cities",
-      icon: "✈️"
-    },
-    {
-      title: "Educational Reels",
-      description: "Fast-paced tech tutorials and educational content designed to simplify coding and software engineering.",
-      stats: "100k+ Views",
-      icon: "🧠"
-    },
-    {
-      title: "My Own Creative Edits",
-      description: "Experimental transitions, 3D overlays, and trendsetting visual effects that push creative bounds.",
-      stats: "Personal Projects",
+      title: "SentinelX Platform",
+      description: "Interactive web platform integrating projects, skills, certifications, and responsive UIs.",
+      stats: "AI + Product",
       icon: "⚡"
+    },
+    {
+      title: "Smart Robotics IoT",
+      description: "ESP32 robotics platform integrating sensors, Robo Car, and Robo Dog for automated control.",
+      stats: "IoT + Automation",
+      icon: "🤖"
     }
   ]
 };
 
-// Brand New Leadership Data
 export const leadershipList = [
   {
-    title: "IEEE Madhya Pradesh Section (Social Media Team)",
-    description: "Managed and coordinated digital content, driving audience engagement and designing interactive visual campaigns for tech events.",
-    role: "Social Media Coordinator",
-    badge: "Volunteer"
+    title: "Presidency University Computer Science Engineering",
+    description: "Maintaining an 8.14 CGPA while leading technical project teams and collaborating across software development projects.",
+    role: "Engineering Scholar",
+    badge: "Academic Excellence"
   },
   {
-    title: "Team Coordinator – Go-Kart International Racing 2K25",
-    description: "Led multi-disciplinary teams in project management, budget control, and logistics coordination for a high-profile international racing event.",
-    role: "Team Coordinator",
-    badge: "Leadership"
+    title: "Bharat Electronics Limited (BEL) Internship",
+    description: "Collaborated with engineering teams across the Software Development Life Cycle (SDLC) to analyze and optimize database workflows.",
+    role: "Software Developer Intern",
+    badge: "Industry Experience"
   },
   {
-    title: "5-Day MOE IDE Bootcamp, Roorkee",
-    description: "Participated in an intensive Innovation, Design, and Entrepreneurship Bootcamp organized by the Ministry of Education at IIT Roorkee.",
-    role: "Bootcamp Graduate",
-    badge: "Innovation"
-  },
-  {
-    title: "Hosted INFORIA Tech Summit Hackathon",
-    description: "Organized and hosted the flagship hackathon, managing registrations, mentoring participant teams, and coordinating judge evaluations.",
-    role: "Hackathon Organizer",
-    badge: "Co-Curricular"
-  },
-  {
-    title: "Event Coordinator & Anchoring – INFORIA 2K25",
-    description: "Coordinated technical events and served as the main stage anchor, speaking in front of large crowds and managing the summit flow.",
-    role: "Stage Anchor & Coordinator",
-    badge: "Public Speaking"
+    title: "Crack-A-Thon 2026 Hackathon Finalist",
+    description: "Achieved Top 10 Finalist position in the university-wide GDG Crack-A-Thon competition.",
+    role: "Team Leader / Finalist",
+    badge: "Achievement"
   }
 ];
 
-// Brand New Internships Data
 export const internshipsList = [
   {
-    organization: "Netlink, Bhopal",
-    role: "Data Analytics & BI Tools Intern",
-    duration: "June 2025 - August 2025",
-    skills: ["Data Analytics", "Business Intelligence", "Dashboard Design", "Data Modeling"],
-    tech: ["Lumenore", "MySQL", "Excel", "BI Tools"]
-  },
-  {
-    organization: "Canva",
-    role: "Visual Content Creator & Designer",
-    duration: "May 2024 - June 2024",
-    skills: ["Visual Designing", "Poster Design", "Team Branding", "Asset Creation"],
-    tech: ["Canva Pro", "Figma", "Canva Design Suite"]
-  },
-  {
-    organization: "CollegeTips.in",
-    role: "Web Development Intern",
-    duration: "1 Month (Offline)",
-    skills: ["Frontend Development", "Responsive Layouts", "API Testing", "Web Performance"],
-    tech: ["HTML5", "CSS3", "JavaScript", "Bootstrap"]
+    organization: "Bharat Electronics Limited (BEL)",
+    role: "Software Developer Intern (Certified)",
+    duration: "Jul 2026 – Aug 2026",
+    skills: ["Database Workflows", "SDLC Collaboration", "System Optimization", "Debugging & Troubleshooting"],
+    tech: ["Python", "MySQL", "SDLC", "Database Tools"],
+    verificationUrl: "https://sites.google.com/view/bel-certification/home"
   }
 ];
 
-// Brand New Soft Skills Data
 export const softSkillsList = [
-  { name: "Leadership", icon: "👑", desc: "Guiding teams, managing tasks, and driving project completion with shared vision." },
-  { name: "Public Speaking", icon: "🎤", desc: "Confident stage presence, anchoring summits, and delivering articulate technical ideas." },
-  { name: "Team Collaboration", icon: "🤝", desc: "Collaborating across fields, building racing carts, and engineering code in sync." },
-  { name: "Communication", icon: "💬", desc: "Clear, concise, and structured interactions in both business and technical contexts." },
-  { name: "Problem Solving", icon: "🧩", desc: "Breaking down complex engineering tasks into clean, logical, and modular pieces." },
-  { name: "Adaptability", icon: "🌟", desc: "Quick to pick up new frameworks like FastAPI, Spring Boot, or automation tools like n8n." },
-  { name: "Creativity", icon: "🎨", desc: "Blending cinematic aesthetics with software structure to build premium experiences." },
-  { name: "Time Management", icon: "⏰", desc: "Balancing B.Tech studies, event hosting, and developing robust software platforms." }
+  { name: "Analytical Problem Solving", icon: "🧩", desc: "Solving complex engineering tasks with structured logic and 500+ DSA problem experience." },
+  { name: "Technical Collaboration", icon: "🤝", desc: "Working seamlessly with engineering teams across all phases of the Software Development Life Cycle." },
+  { name: "Debugging & Optimization", icon: "⚡", desc: "Diagnosing application and database issues to improve system performance and reliability." },
+  { name: "Communication", icon: "💬", desc: "Clear technical documentation, team communication, and project presentations in English, Kannada, and Hindi." },
+  { name: "Adaptability", icon: "🌟", desc: "Quick to master new frameworks, cloud platforms (OCI, AWS), and IoT automation ecosystems." },
+  { name: "Time Management", icon: "⏰", desc: "Balancing B.Tech CSE coursework (8.14 CGPA), BEL internship, and building full-stack platforms." }
 ];
 
 export const projects = [
   {
-    id: "foodmesh",
+    id: "careerbridge",
     number: "01",
-    badge: "🚀 Flagship Project",
-    title: "FoodMesh",
+    badge: "🚀 AI + Analytics Flagship",
+    title: "CareerBridge",
+    subtitle: "AI Career Development Platform",
     description:
-      "FoodMesh — An enterprise-grade multi-tenant restaurant management and food ordering SaaS platform inspired by UrbanPiper. It enables restaurants to manage multiple outlets, menus, inventory, customers, staff, and orders through a scalable architecture with secure authentication, role-based access control, and real-time operations. Built with React, Next.js, NestJS, PostgreSQL, Redis, Kafka, Elasticsearch, Docker, Kubernetes, and AWS.",
+      "Developed an AI-powered career platform for ATS resume evaluation, skill-gap analysis, personalized recommendations, scholarship discovery, learning roadmaps, and interview preparation.",
     techTags: [
-      "React",
-      "Next.js",
-      "NestJS",
-      "PostgreSQL",
-      "Redis",
-      "Kafka",
-      "Elasticsearch",
-      "Docker",
-      "Kubernetes",
-      "AWS",
+      "AI",
+      "React.js",
+      "FastAPI",
+      "Python",
+      "Analytics",
+      "REST APIs"
     ],
     links: {
-      github: "https://github.com/ersamirsingh/UrbanPiper",
-      demo: null,
+      demo: "https://scholar-bridge-lyart.vercel.app/",
     },
     isFlagship: true,
   },
   {
-    id: "karigar",
+    id: "sentinelx",
     number: "02",
-    badge: null,
-    title: "Karigar",
+    badge: "⚡ AI + Product",
+    title: "SentinelX",
+    subtitle: "AI Interactive Portfolio Platform",
     description:
-      "A platform connecting local skilled workers with customers, featuring real-time search, worker profiles, and booking management with full database integration.",
-    techTags: ["React", "Node.js", "MongoDB", "Express", "REST API"],
+      "Developed an interactive web platform integrating projects, skills, certifications, achievements, and project demonstrations with responsive user interfaces.",
+    techTags: ["AI", "React.js", "Tailwind CSS", "Product Engineering"],
     links: {
-      github: "https://github.com/mdyusuf0/Karigar",
-      frontendDemo: "https://karigar-frontend.onrender.com",
-      backendApi: "https://karigar-zny2.onrender.com",
+      demo: "https://sentinel-x-gray.vercel.app/login",
     },
     isFlagship: false,
   },
   {
-    id: "sentiment-analysis",
+    id: "smart-robotics-iot",
     number: "03",
-    badge: null,
-    title: "AI-Powered Sentiment Analysis",
+    badge: "🤖 IoT + Automation",
+    title: "Smart Robotics & IoT Platform",
+    subtitle: "Robotics and IoT Automation System",
     description:
-      "A full-stack web application that analyzes citizen feedback using Artificial Intelligence to classify sentiments as positive, negative, or neutral. Features a responsive React frontend, a Node.js backend, MongoDB for data storage, and n8n automation for workflow orchestration — enabling real-time insights and efficient feedback management.",
-    techTags: ["React", "Node.js", "MongoDB", "n8n", "AI/ML", "REST API"],
+      "Built an IoT robotics platform integrating ESP32, sensors, Robo Car, and Robo Dog for automated control. Implemented sensor-driven automation and real-time device control.",
+    techTags: ["ESP32", "Python", "Sensors", "IoT", "Automation"],
     links: {
-      github: "#", // Update when available
+      documentation: "https://app.notion.com/p/IoT-And-Robotics-38322848edb9804994d1db4a9bdbf441?source=copy_link",
     },
     isFlagship: false,
   },
@@ -299,61 +255,62 @@ export const projects = [
 export const certificates = {
   featured: [
     {
-      name: "Oracle Cloud Infrastructure 2025",
-      issuer: "Oracle",
+      name: "Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate",
+      issuer: "Oracle University",
       icon: "☁️",
+      verificationUrl: "https://sites.google.com/view/oracle-cloud-certification/home",
+      buttonText: "Verify Certificate"
     },
     {
-      name: "Programming in Java (94%)",
-      issuer: "NPTEL",
-      icon: "☕",
-    },
-    {
-      name: "C Programming & Assembly Language",
-      issuer: "NPTEL",
+      name: "Unlocking Open Source with GitHub",
+      issuer: "GDG on Campus, Presidency University",
       icon: "⚙️",
+      verificationUrl: "https://sites.google.com/view/gdg-certification/home",
+      buttonText: "Verify Certificate"
     },
     {
-      name: "Technology Job Simulation",
-      issuer: "Deloitte",
-      icon: "💼",
+      name: "Top 10 Finalist Team — Crack-A-Thon 2026",
+      issuer: "GDG on Campus, Presidency University",
+      icon: "🏆",
+      verificationUrl: "https://sites.google.com/view/gdg-hackathon/home",
+      buttonText: "View Achievement"
     },
     {
-      name: "Career Edge – IT Primer",
-      issuer: "TCS iON",
-      icon: "🎓",
-    },
-    {
-      name: "Fundamentals of BI & Analytics",
-      issuer: "Lumenore",
+      name: "Deloitte Australia Data Analytics Job Simulation",
+      issuer: "Forage",
       icon: "📊",
+      verificationUrl: "https://sites.google.com/view/deloitte-certification/home",
+      buttonText: "Verify Certificate"
     },
+    {
+      name: "Software Developer Internship Certification",
+      issuer: "Bharat Electronics Limited (BEL)",
+      icon: "💼",
+      verificationUrl: "https://sites.google.com/view/bel-certification/home",
+      buttonText: "Verify Certificate"
+    }
   ],
-  viewAllUrl:
-    "https://drive.google.com/file/d/1ObdGWtVSx8SsfR4AcbCySSd9LFXcAs9f/view?usp=sharing",
 };
 
 export const education = {
   degree: "B.Tech – Computer Science & Engineering",
-  institution: "IES College of Technology (RGPV)",
-  cgpa: "8.35",
-  graduation: "2027",
-  twelfth: "12th Science – 81%",
-  tenth: "10th CBSE – 70%",
+  institution: "Presidency University, Bengaluru",
+  cgpa: "8.14 / 10.0",
+  graduation: "2023 – 2027",
+  twelfth: "Pre-University (Class XII, PCMB) – 90%",
+  puInstitution: "Sri Vidyaniketan PU College, Gangavathi",
 };
 
 export const footerContent = {
   taglines: [
-    "Software Engineering & Web Dev",
-    "Java · Spring Boot · React",
-    "Full Stack Applications",
+    "Software Development & Web Applications",
+    "Python · Java · SQL · React.js",
+    "Scalable & Reliable Tech Solutions",
   ],
-  credential: "B.Tech CSE · CGPA 8.35",
-  copyright: `© ${new Date().getFullYear()} Md Yusuf | Built with React`,
+  credential: "B.Tech CSE · CGPA 8.14",
+  copyright: `© ${new Date().getFullYear()} Bhoomika K | Built with React`,
 };
 
-// EmailJS Configuration
-// Will read directly from environment variables in Vite (starting with VITE_)
 export const emailjsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID || "YOUR_EMAILJS_SERVICE_ID",
   templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_EMAILJS_TEMPLATE_ID",

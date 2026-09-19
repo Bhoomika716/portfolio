@@ -13,6 +13,12 @@ const ExternalLinkIcon = () => (
   </svg>
 );
 
+const DocIcon = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+  </svg>
+);
+
 const ProjectCard = ({ project, aosDelay }) => (
   <div 
     data-aos="fade-up"
@@ -36,13 +42,18 @@ const ProjectCard = ({ project, aosDelay }) => (
       )}
 
       {/* Number + Title */}
-      <div className="flex items-baseline gap-4 mb-4">
+      <div className="flex items-baseline gap-4 mb-2">
         <span className="text-5xl font-black text-white/10 font-serif italic">{project.number}</span>
-        <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>
+        <div>
+          <h3 className="text-2xl md:text-3xl font-black text-white tracking-tight">{project.title}</h3>
+          {project.subtitle && (
+            <p className="text-xs md:text-sm font-semibold text-red-400 mt-1 uppercase tracking-wider">{project.subtitle}</p>
+          )}
+        </div>
       </div>
 
       {/* Description */}
-      <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6 max-w-2xl font-medium">
+      <p className="text-white/60 text-sm md:text-base leading-relaxed mb-6 max-w-2xl font-medium mt-3">
         {project.description}
       </p>
 
@@ -58,10 +69,10 @@ const ProjectCard = ({ project, aosDelay }) => (
         ))}
       </div>
 
-      {/* Action Buttons */}
+      {/* Action Buttons — ONLY valid link buttons are rendered */}
       <div className="flex flex-wrap gap-3">
-        {/* GitHub */}
-        {project.links.github && (
+        {/* GitHub Link (Only if present) */}
+        {project.links?.github && (
           <a 
             href={project.links.github}
             target="_blank"
@@ -73,46 +84,29 @@ const ProjectCard = ({ project, aosDelay }) => (
           </a>
         )}
 
-        {/* Live Demo (single) */}
-        {project.links.demo !== undefined && (
+        {/* Live Demo Link (Only if present) */}
+        {project.links?.demo && (
           <a 
-            href={project.links.demo || '#'}
-            target={project.links.demo ? "_blank" : undefined}
-            rel={project.links.demo ? "noopener noreferrer" : undefined}
-            className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
-              project.links.demo 
-                ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]' 
-                : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
-            }`}
-          >
-            <ExternalLinkIcon />
-            {project.links.demo ? 'Live Demo' : 'Demo Coming Soon'}
-          </a>
-        )}
-
-        {/* Frontend Demo (Karigar) */}
-        {project.links.frontendDemo && (
-          <a 
-            href={project.links.frontendDemo}
+            href={project.links.demo}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
           >
             <ExternalLinkIcon />
-            Frontend Demo
+            Live Demo
           </a>
         )}
 
-        {/* Backend API (Karigar) */}
-        {project.links.backendApi && (
+        {/* Documentation Link (Only if present) */}
+        {project.links?.documentation && (
           <a 
-            href={project.links.backendApi}
+            href={project.links.documentation}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white/20 transition-all duration-300"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-white text-sm font-semibold hover:bg-white hover:text-black transition-all duration-300"
           >
-            <ExternalLinkIcon />
-            Backend API
+            <DocIcon />
+            Documentation
           </a>
         )}
       </div>
@@ -134,7 +128,7 @@ const Projects = () => {
             Work that speaks <br className="hidden md:block" />for itself
           </h2>
           <p className="text-white/50 text-base md:text-lg max-w-lg font-medium leading-relaxed">
-            A selection of projects that showcase my expertise in full-stack development and modern architecture.
+            A selection of projects that showcase my expertise in software development, AI platforms, and IoT automation.
           </p>
         </div>
 

@@ -1,15 +1,21 @@
 import React from 'react';
 import { internshipsList } from '../data/portfolioData';
 
+const ExternalLinkIcon = () => (
+  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+  </svg>
+);
+
 const InternshipCard = ({ intern, index }) => (
   <div 
     data-aos="fade-up"
     data-aos-delay={index * 150}
-    className="bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:scale-[1.02] hover:bg-black/35 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 flex flex-col justify-between"
+    className="bg-black/20 backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:scale-[1.02] hover:bg-black/35 hover:shadow-[0_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 flex flex-col justify-between w-full max-w-2xl mx-auto"
   >
     <div>
       <div className="flex justify-between items-start mb-6">
-        <span className="text-white/40 text-xs font-mono font-bold tracking-widest uppercase">
+        <span className="text-white/60 text-xs font-mono font-bold tracking-widest uppercase">
           {intern.duration}
         </span>
         <span className="bg-white/10 text-white text-[10px] font-black tracking-widest uppercase py-1 px-3 rounded-full border border-white/15">
@@ -19,14 +25,14 @@ const InternshipCard = ({ intern, index }) => (
       <h3 className="text-white text-2xl font-black mb-1 tracking-tight">
         {intern.role}
       </h3>
-      <p className="text-red-200 text-sm font-black tracking-wide mb-6 uppercase">
+      <p className="text-red-200 text-base font-black tracking-wide mb-6 uppercase">
         {intern.organization}
       </p>
 
-      {/* Skills gained */}
+      {/* Responsibilities & Skills */}
       <div className="mb-6">
-        <h4 className="text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Skills Gained:</h4>
-        <ul className="text-white/90 text-sm font-medium space-y-1 pl-4 list-disc">
+        <h4 className="text-white/70 text-xs font-bold uppercase tracking-wider mb-2">Key Contributions & SDLC Focus:</h4>
+        <ul className="text-white/90 text-sm font-medium space-y-2 pl-4 list-disc leading-relaxed">
           {intern.skills.map((skill, i) => (
             <li key={i}>{skill}</li>
           ))}
@@ -34,26 +40,40 @@ const InternshipCard = ({ intern, index }) => (
       </div>
     </div>
 
-    {/* Technologies used */}
-    <div className="pt-4 border-t border-white/10">
-      <h4 className="text-white/60 text-xs font-bold uppercase tracking-wider mb-3">Technologies:</h4>
-      <div className="flex flex-wrap gap-2">
-        {intern.tech.map((t) => (
-          <span 
-            key={t}
-            className="px-3 py-1 text-xs font-mono font-bold text-white bg-white/10 rounded-full border border-white/10 hover:bg-white/20 transition-all"
-          >
-            {t}
-          </span>
-        ))}
+    {/* Technologies & Verification */}
+    <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div>
+        <h4 className="text-white/60 text-xs font-bold uppercase tracking-wider mb-2">Technologies:</h4>
+        <div className="flex flex-wrap gap-2">
+          {intern.tech.map((t) => (
+            <span 
+              key={t}
+              className="px-3 py-1 text-xs font-mono font-bold text-white bg-white/10 rounded-full border border-white/10 hover:bg-white/20 transition-all"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
       </div>
+
+      {intern.verificationUrl && (
+        <a 
+          href={intern.verificationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white text-black text-xs font-bold hover:bg-gray-200 transition-all duration-300 whitespace-nowrap self-start sm:self-auto shadow-md"
+        >
+          Verify Certificate
+          <ExternalLinkIcon />
+        </a>
+      )}
     </div>
   </div>
 );
 
 const Internships = () => {
   return (
-    <section className="bg-[#ff2a2a] pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans">
+    <section id="experience" className="bg-[#ff2a2a] pt-24 pb-32 px-6 md:px-12 w-full relative overflow-hidden font-sans">
       
       {/* Torn paper divider at top */}
       <div className="absolute top-0 left-0 w-full pointer-events-none z-10 transform -translate-y-[1px] rotate-180">
@@ -70,12 +90,12 @@ const Internships = () => {
             Work Experience
           </h2>
           <p className="text-red-100 text-base md:text-lg font-semibold max-w-lg mx-auto">
-            Practical internships where I applied engineering principles and built real-world assets.
+            Practical industry internship collaborating across the SDLC.
           </p>
         </div>
 
-        {/* Internship Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+        {/* Internship Cards */}
+        <div className="flex flex-col gap-6 md:gap-8">
           {internshipsList.map((intern, index) => (
             <InternshipCard key={intern.organization} intern={intern} index={index} />
           ))}
