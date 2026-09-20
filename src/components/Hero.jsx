@@ -27,22 +27,22 @@ const Hero = () => {
     }
   }, []);
 
-  const toggleVideo = (e) => {
+  const toggleVideo = async (e) => {
     e.stopPropagation();
-    if (videoRef.current) {
-      if (videoRef.current.paused) {
-        const playPromise = videoRef.current.play();
-        if (playPromise !== undefined) {
-          playPromise.then(() => {
-            setIsPlaying(true);
-          }).catch((err) => {
-            console.error("Play failed:", err);
-          });
-        }
-      } else {
-        videoRef.current.pause();
-        setIsPlaying(false);
+    if (!videoRef.current) return;
+
+    if (videoRef.current.paused || isMuted) {
+      try {
+        videoRef.current.muted = false;
+        setIsMuted(false);
+        await videoRef.current.play();
+        setIsPlaying(true);
+      } catch (error) {
+        console.error("Video playback failed:", error);
       }
+    } else {
+      videoRef.current.pause();
+      setIsPlaying(false);
     }
   };
 
