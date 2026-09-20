@@ -2,12 +2,13 @@ import React, { useRef, useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import heroVideo from '../assets/hero video/bhoomika-hero.mp4';
+import heroPoster from '../assets/about/bhoomika-photo.jpg';
 import { heroContent, personalInfo, socialLinks } from '../data/portfolioData';
 
 const Hero = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
     AOS.init({
@@ -15,15 +16,29 @@ const Hero = () => {
       once: true,
       easing: 'ease-out'
     });
-    // Video does NOT autoplay anymore
+
+    if (videoRef.current) {
+      videoRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch((err) => {
+        console.log("Autoplay failed or blocked:", err);
+        setIsPlaying(false);
+      });
+    }
   }, []);
 
   const toggleVideo = (e) => {
     e.stopPropagation();
     if (videoRef.current) {
       if (videoRef.current.paused) {
-        videoRef.current.play();
-        setIsPlaying(true);
+        const playPromise = videoRef.current.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            setIsPlaying(true);
+          }).catch((err) => {
+            console.error("Play failed:", err);
+          });
+        }
       } else {
         videoRef.current.pause();
         setIsPlaying(false);
@@ -36,12 +51,15 @@ const Hero = () => {
       {/* Background Video */}
       <video
         ref={videoRef}
+        src={heroVideo}
+        poster={heroPoster}
+        autoPlay
         loop
         muted={isMuted}
         playsInline
+        preload="auto"
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src={heroVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
